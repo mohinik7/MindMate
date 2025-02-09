@@ -12,7 +12,7 @@ def initialize_llm():
     
     llm = ChatGroq(
         temperature=0,
-        groq_api_key="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",
+        groq_api_key="your_api_key_here",
         model_name="llama-3.3-70b-versatile"
     )
 
@@ -68,7 +68,7 @@ def chatbot_response(user_input, history):
     return {"role": "assistant", "content": assistant_response}
 
 with gr.Blocks(theme='Respair/Shiki@1.2.1') as app:
-    gr.Markdown("# 🧠 Mental Health Chatbot 🤖")
+    gr.Markdown("# 🧠 MindMate+ 🤖")
     gr.Markdown("A compassionate chatbot designed to assist with mental well-being. Please note: For serious concerns, contact a professional.")
     
     chatbot = gr.ChatInterface(
